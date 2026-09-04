@@ -1,31 +1,59 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# Texas Drone Company service status
+# Powered by Upptime (https://upptime.js.org)
+#
+# Outside-in monitoring: these checks run from GitHub Actions, so they keep
+# working (and keep alerting via GitHub Issues) even when our own stack is down.
+# Complements the internal /admin/status page in the DroneVision app.
+
+owner: TexasDroneCompany
+repo: status.txdroneco.com
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  # Customer-facing portal (Vercel). /login is a stable unauthenticated 200;
+  # the root path 307-redirects, so we check the login page directly.
+  - name: DroneVision Portal
+    url: https://dronevision.txdroneco.com/login
+
+  # Map tile service (txtiler-1 droplet, behind Caddy). Root returns 200.
+  - name: Map Tiles (txTiler)
+    url: https://txtiler.txdroneco.com
+
+  # Photo packager on the same droplet, distinct container - its /health is
+  # deliberately unauthenticated and reports queue state. A separate check
+  # because the packager can be down while Caddy/txTiler are up.
+  - name: Photo Packager
+    url: https://txtiler.txdroneco.com/packager/health
+
+  # Selfhosted ODM pipeline runner (odm-1 droplet). Open /health route.
+  - name: ODM Processing
+    url: https://odm.txdroneco.com/health
+
+  # Supabase API gateway (auth + DB + storage front door). The health route
+  # returns 401 without an apikey header - that still proves the gateway is
+  # up and responding, without baking a key into a public repo.
+  - name: Supabase API
+    url: https://uhlfqorijoabyzjhhsdo.supabase.co/auth/v1/health
+    expectedStatusCodes:
+      - 200
+      - 401
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  # Custom domain: once the Cloudflare CNAME for status.txdroneco.com exists
+  # (status -> texasdronecompany.github.io, DNS-only), swap baseUrl for cname:
+  # cname: status.txdroneco.com
+  baseUrl: /status.txdroneco.com
+  name: Texas Drone Company
+  introTitle: "**Texas Drone Company** service status - live uptime and response times for the DroneVision portal and processing pipeline."
+  introMessage: Having trouble? Reach us at [txdroneco.com](https://txdroneco.com).
   navbar:
     - title: Status
       href: /
+    - title: DroneVision Portal
+      href: https://dronevision.txdroneco.com
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+# Downtime opens a GitHub Issue in this repo and assigns it - that's the
+# built-in alerting. Slack/email notifications can be added later via secrets.
+assignees:
+  - txdroneco
