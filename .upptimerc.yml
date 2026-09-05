@@ -38,10 +38,9 @@ sites:
       - 401
 
 status-website:
-  # Custom domain: once the Cloudflare CNAME for status.txdroneco.com exists
-  # (status -> texasdronecompany.github.io, DNS-only), swap baseUrl for cname:
-  # cname: status.txdroneco.com
-  baseUrl: /status.txdroneco.com
+  # Requires the Cloudflare CNAME: status -> texasdronecompany.github.io
+  # (bare hostname, no path; DNS-only/gray cloud so the page outlives a CF outage)
+  cname: status.txdroneco.com
   name: Texas Drone Company
   introTitle: "**Texas Drone Company** service status - live uptime and response times for the DroneVision portal and processing pipeline."
   introMessage: Having trouble? Reach us at [txdroneco.com](https://txdroneco.com).
