@@ -40,18 +40,20 @@
     "url": "https://txtiler.txdroneco.com/packager/health",
     "icon": "https://icons.duckduckgo.com/ip3/txtiler.txdroneco.com.ico",
     "slug": "photo-packager",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.99%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 346,
-    "timeDay": 393,
-    "timeWeek": 366,
-    "timeMonth": 346,
-    "timeYear": 346,
-    "dailyMinutesDown": {}
+    "time": 343,
+    "timeDay": 316,
+    "timeWeek": 345,
+    "timeMonth": 342,
+    "timeYear": 343,
+    "dailyMinutesDown": {
+      "2026-10-07": 0
+    }
   },
   {
     "name": "ODM Processing",
