@@ -1,7 +1,7 @@
 url: https://txtiler.txdroneco.com/packager/health
-status: up
-code: 200
-responseTime: 393
-lastUpdated: 2026-10-07T11:16:53.504Z
+status: down
+code: 503
+responseTime: 239
+lastUpdated: 2026-10-07T23:47:47.290Z
 startTime: 2026-09-05T00:45:27.785Z
 generator: Upptime <https://github.com/upptime/upptime>
