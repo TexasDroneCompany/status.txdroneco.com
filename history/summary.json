@@ -10,11 +10,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 463,
-    "timeDay": 210,
-    "timeWeek": 446,
-    "timeMonth": 442,
-    "timeYear": 463,
+    "time": 465,
+    "timeDay": 372,
+    "timeWeek": 456,
+    "timeMonth": 454,
+    "timeYear": 465,
     "dailyMinutesDown": {}
   },
   {
@@ -28,11 +28,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 204,
-    "timeDay": 176,
-    "timeWeek": 204,
-    "timeMonth": 203,
-    "timeYear": 204,
+    "time": 205,
+    "timeDay": 201,
+    "timeWeek": 211,
+    "timeMonth": 201,
+    "timeYear": 205,
     "dailyMinutesDown": {}
   },
   {
@@ -40,19 +40,20 @@
     "url": "https://txtiler.txdroneco.com/packager/health",
     "icon": "https://icons.duckduckgo.com/ip3/txtiler.txdroneco.com.ico",
     "slug": "photo-packager",
-    "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "99.99%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
+    "status": "up",
+    "uptime": "99.65%",
+    "uptimeDay": "88.44%",
+    "uptimeWeek": "98.35%",
+    "uptimeMonth": "99.62%",
+    "uptimeYear": "99.65%",
     "time": 343,
-    "timeDay": 316,
-    "timeWeek": 345,
+    "timeDay": 322,
+    "timeWeek": 340,
     "timeMonth": 342,
     "timeYear": 343,
     "dailyMinutesDown": {
-      "2026-10-07": 0
+      "2026-10-08": 154,
+      "2026-10-07": 12
     }
   },
   {
@@ -66,11 +67,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 191,
-    "timeDay": 265,
-    "timeWeek": 214,
-    "timeMonth": 186,
-    "timeYear": 191,
+    "time": 192,
+    "timeDay": 244,
+    "timeWeek": 217,
+    "timeMonth": 184,
+    "timeYear": 192,
     "dailyMinutesDown": {}
   },
   {
@@ -85,9 +86,9 @@
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
     "time": 94,
-    "timeDay": 45,
-    "timeWeek": 98,
-    "timeMonth": 89,
+    "timeDay": 70,
+    "timeWeek": 93,
+    "timeMonth": 90,
     "timeYear": 94,
     "dailyMinutesDown": {}
   }
